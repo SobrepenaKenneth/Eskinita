@@ -1,12 +1,11 @@
-
-package;
+package states;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import openfl.Assets;
 
-class TitleScreen extends FlxState {
+class StateTitleScreen extends FlxState {
     override public function create():Void {
         super.create();
 
