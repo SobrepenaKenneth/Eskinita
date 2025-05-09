@@ -1,28 +1,38 @@
- _______   ________  ___  __    ___  ________   ___  _________  ________     
-|\  ___ \ |\   ____\|\  \|\  \ |\  \|\   ___  \|\  \|\___   ___\\   __  \    
-\ \   __/|\ \  \___|\ \  \/  /|\ \  \ \  \\ \  \ \  \|___ \  \_\ \  \|\  \   
- \ \  \_|/_\ \_____  \ \   ___  \ \  \ \  \\ \  \ \  \   \ \  \ \ \   __  \  
-  \ \  \_|\ \|____|\  \ \  \\ \  \ \  \ \  \\ \  \ \  \   \ \  \ \ \  \ \  \ 
-   \ \_______\____\_\  \ \__\\ \__\ \__\ \__\\ \__\ \__\   \ \__\ \ \__\ \__\
-    \|_______|\_________\|__| \|__|\|__|\|__| \|__|\|__|    \|__|  \|__|\|__|
-             \|_________|    
 
-                "Stories from the side streets."
+# The Weavers of Dusk
 
-                
----
+Concept By: Kyle Acosta 
 
-## 🎮 Eskinita
+In the coastal town of Himbing Bay where firefly trees illuminate the shoreline and time moves differently during the annual "Ghost Tide," 16-year-old Amihan discovers she can enter the "Pusô" (heart-space) of people by touching objects meaningful to them. Inside these emotional landscapes, memories appear as intricate woven patterns that can be unraveled or reinforced.
 
-**Eskinita** is a heartfelt alleyway adventure where forgotten places reveal unforgettable tales.  
-Wander through pixel-lined corridors, uncover stories, and explore quiet corners of the city.
+# Objectives
+- Do the main menu
+- rename the hx
+- add some animation to the text
+- add some transitions
+- edit the intro songs
+- do the art
+- attempt to add transition between Intro and IntroScreen
 
----
+# Issues
+- (A1) CrtShader also affect IntroScreen it should only be in Intro.hx
+- (A2) it takes a while to compile that needs to be fixed
+- (A3) zoom out and zoom in should take a while
+- (A4) in Intro.hx what is supposed to do is it will zoom out and then zooms in the zoom out only works but the zoom in does not
+- (A5) and instantly switch to the Intro Screen
 
-### 🚧 Game in Development  
-Made with ❤️ using **[HaxeFlixel](https://haxeflixel.com)**
+# Fixes
+- (A3, A4, A5) fixed
 
----
+## Programming (Still learning lol..)
 
-                                                
-                                                                        
+- [@x40arcade](https://github.com/SobrepenaKenneth)
+
+## Artist / Writer
+
+- [@Steveluv Arts](https://www.instagram.com/steveyarts/)
+
+## Writer / PlayTester
+
+- [@Steveluv Arts](https://www.instagram.com/steveyarts/)
+

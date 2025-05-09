@@ -16,9 +16,7 @@ class StateIntroScreen2 extends FlxState {
         // Functions
         rainbowEFFECT();
         backdropTest();
-        spaceBtn();
-
-
+		spaceBtn();
     }
 
     public function rainbowEFFECT() {
