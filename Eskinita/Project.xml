@@ -32,14 +32,13 @@
 	<set name="BUILD_DIR" value="export" />
 	<assets path="assets/music" rename="music" include="*.mp3" />
 	<assets path="assets/fonts" include="*.ttf" />
+	<assets path="assets/fonts" rename="fonts"/>
 	<source path="source" />
 	<assets path="assets" />
 	   
 
 	<!-- _______________________________ Libraries ______________________________ -->
-
 	<haxelib name="flixel" />
-
 	<classpath path="assets/data/textbox" />
 	
 

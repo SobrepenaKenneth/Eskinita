@@ -69,6 +69,7 @@ import sys.FileSystem;
 
 		#if (openfl && !flash && !display)
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_blocktopia_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__fonts_blocktopia_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_blocktopia_ttf1);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
@@ -94,6 +95,7 @@ import sys.FileSystem;
 #if flash
 
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__fonts_blocktopia_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf1 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_494357736_1416215676459251_1379859583041081763_n_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -152,55 +154,57 @@ import sys.FileSystem;
 
 #elseif (desktop || cpp)
 
-@:keep @:file("C:/HaxeToolkit/haxe/lib/flixel/6,1,0/assets/sounds/beep.ogg") @:noCompletion #if display private #end class __ASSET__flixel_sounds_beep_ogg extends haxe.io.Bytes {}
-@:keep @:file("C:/HaxeToolkit/haxe/lib/flixel/6,1,0/assets/sounds/flixel.ogg") @:noCompletion #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends haxe.io.Bytes {}
-@:keep @:font("C:/HaxeToolkit/haxe/lib/flixel/6,1,0/assets/fonts/nokiafc22.ttf") @:noCompletion #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
-@:keep @:font("C:/HaxeToolkit/haxe/lib/flixel/6,1,0/assets/fonts/monsterrat.ttf") @:noCompletion #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel/6,1,0/assets/images/ui/button.png") @:noCompletion #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel/6,1,0/assets/images/logo/default.png") @:noCompletion #if display private #end class __ASSET__flixel_images_logo_default_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-addons/3,3,2/assets/images/transitions/circle.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_circle_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-addons/3,3,2/assets/images/transitions/diagonal_gradient.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_diagonal_gradient_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-addons/3,3,2/assets/images/transitions/diamond.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_diamond_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-addons/3,3,2/assets/images/transitions/square.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_square_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/djFlixel/git/assets/ui_atlas.png") @:noCompletion #if display private #end class __ASSET__assets_ui_atlas_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/box.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button_arrow_down.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button_arrow_left.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button_arrow_right.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button_arrow_up.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button_thin.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/button_toggle.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/check_box.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/check_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/chrome.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/chrome_flat.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/chrome_inset.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/chrome_light.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/dropdown_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/finger_big.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/finger_small.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/hilight.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/invis.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/minus_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/plus_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/radio.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/radio_dot.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/swatch.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/tab.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/tab_back.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends lime.graphics.Image {}
-@:keep @:image("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/images/tooltip_arrow.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends lime.graphics.Image {}
-@:keep @:file("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/xml/defaults.xml") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends haxe.io.Bytes {}
-@:keep @:file("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/xml/default_loading_screen.xml") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends haxe.io.Bytes {}
-@:keep @:file("C:/HaxeToolkit/haxe/lib/flixel-ui/git/assets/xml/default_popup.xml") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends haxe.io.Bytes {}
+@:keep @:file("C:/haxeflixel/flixel/6,1,0/assets/sounds/beep.ogg") @:noCompletion #if display private #end class __ASSET__flixel_sounds_beep_ogg extends haxe.io.Bytes {}
+@:keep @:file("C:/haxeflixel/flixel/6,1,0/assets/sounds/flixel.ogg") @:noCompletion #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends haxe.io.Bytes {}
+@:keep @:font("C:/haxeflixel/flixel/6,1,0/assets/fonts/nokiafc22.ttf") @:noCompletion #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
+@:keep @:font("C:/haxeflixel/flixel/6,1,0/assets/fonts/monsterrat.ttf") @:noCompletion #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
+@:keep @:image("C:/haxeflixel/flixel/6,1,0/assets/images/ui/button.png") @:noCompletion #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel/6,1,0/assets/images/logo/default.png") @:noCompletion #if display private #end class __ASSET__flixel_images_logo_default_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-addons/3,3,2/assets/images/transitions/circle.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_circle_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-addons/3,3,2/assets/images/transitions/diagonal_gradient.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_diagonal_gradient_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-addons/3,3,2/assets/images/transitions/diamond.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_diamond_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-addons/3,3,2/assets/images/transitions/square.png") @:noCompletion #if display private #end class __ASSET__flixel_images_transitions_square_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/djFlixel/git/assets/ui_atlas.png") @:noCompletion #if display private #end class __ASSET__assets_ui_atlas_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/box.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button_arrow_down.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button_arrow_left.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button_arrow_right.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button_arrow_up.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button_thin.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/button_toggle.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/check_box.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/check_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/chrome.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/chrome_flat.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/chrome_inset.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/chrome_light.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/dropdown_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/finger_big.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/finger_small.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/hilight.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/invis.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/minus_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/plus_mark.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/radio.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/radio_dot.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/swatch.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/tab.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/tab_back.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends lime.graphics.Image {}
+@:keep @:image("C:/haxeflixel/flixel-ui/2,6,4/assets/images/tooltip_arrow.png") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends lime.graphics.Image {}
+@:keep @:file("C:/haxeflixel/flixel-ui/2,6,4/assets/xml/defaults.xml") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends haxe.io.Bytes {}
+@:keep @:file("C:/haxeflixel/flixel-ui/2,6,4/assets/xml/default_loading_screen.xml") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends haxe.io.Bytes {}
+@:keep @:file("C:/haxeflixel/flixel-ui/2,6,4/assets/xml/default_popup.xml") @:noCompletion #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends haxe.io.Bytes {}
 
 @:keep @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
+@:keep @:noCompletion #if display private #end class __ASSET__fonts_blocktopia_ttf extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
 @:keep @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf1 extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
 
 
 #else
 
 @:keep @:expose('__ASSET__assets_fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "assets/fonts/blocktopia.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__fonts_blocktopia_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "fonts/blocktopia.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__assets_fonts_blocktopia_ttf1') @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf1 extends lime.text.Font { public function new () { #if !html5 __fontPath = "assets/fonts/blocktopia.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__flixel_fonts_nokiafc22_ttf') @:noCompletion #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "flixel/fonts/nokiafc22.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Nokia Cellphone FC Small"; super (); }}
 @:keep @:expose('__ASSET__flixel_fonts_monsterrat_ttf') @:noCompletion #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "flixel/fonts/monsterrat.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Monsterrat"; super (); }}
@@ -212,12 +216,14 @@ import sys.FileSystem;
 
 #if html5
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf extends openfl.text.Font { public function new () { name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__OPENFL__fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__fonts_blocktopia_ttf extends openfl.text.Font { public function new () { name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf1') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf1 extends openfl.text.Font { public function new () { name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_nokiafc22_ttf ()); super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_monsterrat_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_monsterrat_ttf ()); super (); }}
 
 #else
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__OPENFL__fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__fonts_blocktopia_ttf extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf1') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf1 extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_nokiafc22_ttf ()); super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_monsterrat_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_monsterrat_ttf ()); super (); }}

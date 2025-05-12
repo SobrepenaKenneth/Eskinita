@@ -1,4 +1,4 @@
-package states;
+package scene;
 
 import flixel.FlxG;
 import flixel.FlxSprite;

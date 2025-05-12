@@ -1,15 +1,15 @@
 package;
 
 import flixel.FlxGame;
+import flixel.FlxSprite;
+import flixel.FlxState;
 import openfl.display.Sprite;
-import states.Intro;
-import states.IntroScreen;
 
 class Main extends Sprite
 {
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(1280, 720, Intro));
+		addChild(new FlxGame(1280, 720, scene.Intro));
 	}
 }

@@ -1,4 +1,4 @@
-package states;
+package scene;
 import djFlixel.gfx.RainbowStripes;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -37,7 +37,7 @@ class StateIntroScreen2 extends FlxState {
     public function spaceBtn() {
         // Key press should be checked here
         if (FlxG.keys.justPressed.SPACE) {
-            FlxG.switchState(states.MenuState.new); // Fix: proper instantiation
+            FlxG.switchState(scene.MenuState.new); // Fix: proper instantiation
         }
     }
         

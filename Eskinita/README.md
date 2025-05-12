@@ -13,6 +13,7 @@ In the coastal town of Himbing Bay where firefly trees illuminate the shoreline 
 - edit the intro songs
 - do the art
 - attempt to add transition between Intro and IntroScreen
+- add a skip when a key is pressed for the intro and instantly switch the state
 
 # Issues
 - (A1) CrtShader also affect IntroScreen it should only be in Intro.hx

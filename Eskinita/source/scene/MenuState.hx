@@ -1,4 +1,4 @@
-package states;
+package scene;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -29,7 +29,7 @@ class MenuState extends FlxState
 	public function startGame()
 	{
 		// such a dumb name lmfao
-		FlxG.switchState(new PlayState());
+		FlxG.switchState(PlayState.new);
 	}
 
 }

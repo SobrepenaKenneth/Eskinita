@@ -1,27 +1,35 @@
-package states;
+package scene;
 
 import djFlixel.gfx.StarfieldSimple;
 import djFlixel.gfx.shader.CRTShader;
 import djFlixel.ui.FlxAutoText;
 import flixel.FlxCamera;
+import flixel.FlxG.keys;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.transition.FlxTransitionSprite;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
+import flixel.input.keyboard.FlxKey;
+import flixel.input.keyboard.FlxKeyboard;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 import openfl.filters.ShaderFilter;
 
-// This is such a stupid name fr fr i'll fix this later
 class Intro extends FlxTransitionableState
 {
     var studioGunita:FlxText;
     var presents:FlxText;
+    var transitionTest:FlxTransitionSprite;
     private var visualizer:StarfieldSimple;
     private var visualizerCRT:CRTShader;
 	private var AutoText:FlxAutoText;
+    var fadeSprite:FlxSprite;
+    var key:FlxKey;
+    var SkipBtn:FlxButton;
 
     override public function create():Void {
         super.create();
@@ -35,7 +43,30 @@ class Intro extends FlxTransitionableState
         textFade();
         textFade2();
         cameraTest();
+        Skipbutton();
+    }
 
+    // this is like a skip for the intro still working on it 
+    private function onSkipKeyPressed(Key:String):Void {
+        if (key == "SPACE") {
+            FlxG.sound.destroy(true);
+            FlxG.game.setFilters([]);
+
+            FlxG.switchState(scene.MainMenu.new);
+        }
+    }
+
+    // TESTING
+    public function Skipbutton(){
+        SkipBtn = new FlxButton();
+        var SkipBtn = new FlxButton(640, 250, "Skip", SkipGame);
+        add(SkipBtn);
+    }
+
+    public function SkipGame() {
+        FlxG.sound.destroy(true);
+        FlxG.game.setFilters([]);
+        FlxG.switchState(scene.ChapterSelection.new);
     }
 
     // This are the functions that do stuff
@@ -138,7 +169,10 @@ class Intro extends FlxTransitionableState
                 FlxTween.tween(FlxG.camera, {zoom: 2}, 5, {
                     ease: FlxEase.quintIn,
                     onComplete: function(_) {
-                        FlxG.switchState(states.IntroScreen.new);
+                        FlxG.sound.destroy(true);
+                        FlxG.game.setFilters([]);
+                        fadeOutWithSprite();
+                        FlxG.switchState(scene.MainMenu.new);
                     }
                 });
             }
@@ -147,11 +181,37 @@ class Intro extends FlxTransitionableState
 
     public function exitScene():Void {
         // Clear the CRT effect before transitioning to the next state
-        FlxG.game.setFilters([]);
         FlxTween.tween(FlxG.camera, {zoom: 2}, 10, {
             ease: FlxEase.quintIn,
             onComplete: function(_) {
-                FlxG.switchState(states.IntroScreen.new);
+                FlxG.sound.destroy(true);
+                FlxG.game.setFilters([]);
+                fadeOutWithSprite();
+                FlxG.switchState(scene.MainMenu.new);
+            }
+        });
+    }
+
+    public function fadeOutToNextState():Void {
+    // Fade to black over 1 second, then switch to the next state
+    FlxG.camera.fade(FlxColor.BLACK, 1, true, function() {
+        FlxG.switchState(scene.MainMenu.new);
+        });
+    }
+
+    // Working on transition im still learning it
+    public function fadeOutWithSprite():Void {
+        // Create a black sprite that covers the screen
+        var fadeSprite = new FlxSprite(0, 0);
+        fadeSprite.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+        fadeSprite.alpha = 0; // Start fully transparent
+        add(fadeSprite);
+
+        // Tween the alpha to 1 (fully opaque) over 1 second
+        FlxTween.tween(fadeSprite, {alpha: 1}, 1, {
+            ease: FlxEase.quadIn,
+            onComplete: function(_) {
+                FlxG.switchState(scene.MainMenu.new);
             }
         });
     }
