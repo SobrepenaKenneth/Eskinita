@@ -33,8 +33,7 @@ class Intro extends FlxTransitionableState
 
     override public function create():Void {
         super.create();
-        // Calling those Functions order matters
-        playMusic();
+		// Calling those Functions order matters
         blackBoxBG();
         crtScanner();
         BarVisualizer();
@@ -133,13 +132,13 @@ class Intro extends FlxTransitionableState
     }
 
     public function textFade2() {
-        FlxTween.tween(presents, {alpha: 1}, 10, {
+		FlxTween.tween(presents, {alpha: 1}, 5, {
             ease: FlxEase.quadIn,
             onStart: function(_) {
                 presents.alpha = 0; // Ensure alpha starts at 0
             }
         });
-        FlxTween.tween(presents, {alpha: 1}, 10, {ease: FlxEase.quadIn});
+		FlxTween.tween(presents, {alpha: 1}, 5, {ease: FlxEase.quadIn});
 
         // Fade out and transition
         FlxTween.tween(presents, {alpha: 0}, 10, {

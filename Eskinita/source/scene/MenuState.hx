@@ -18,8 +18,7 @@ class MenuState extends FlxState
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
-		start = new FlxButton(0,0,"New Game",startGame);
-		
+		start = new FlxButton(0, 0, "New Game", startGame);
 		add(start);
 		start.screenCenter();
 		title = new FlxText(start.getPosition().x - 250,start.getPosition().y - 50,0,"Haggler Visual Novel Engine Demo",28);
