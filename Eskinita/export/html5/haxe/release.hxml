@@ -39,6 +39,6 @@
 --remap flash:openfl
 --macro flixel.system.macros.FlxDefines.run()
 --macro keep('flixel.tweens.FlxEase')
--js export/html5/bin/Eskinita.js
+-js export/html5/bin/Aninag.js
 -cp export/html5/haxe
 -D html5

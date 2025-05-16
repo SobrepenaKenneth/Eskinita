@@ -16,11 +16,11 @@ class ApplicationMain
 	#if !macro
 	public static function main()
 	{
-		lime.system.System.__registerEntryPoint("Eskinita", create);
+		lime.system.System.__registerEntryPoint("Aninag", create);
 
 		#if (js && html5)
 		#if (munit || (utest && openfl_enable_utest_legacy_mode))
-		lime.system.System.embed("Eskinita", null, 1280, 720);
+		lime.system.System.embed("Aninag", null, 1280, 720);
 		#end
 		#else
 		create(null);
@@ -35,10 +35,10 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "9";
+		app.meta["build"] = "10";
 		app.meta["company"] = "HaxeFlixel";
-		app.meta["file"] = "Eskinita";
-		app.meta["name"] = "Eskinita";
+		app.meta["file"] = "Aninag";
+		app.meta["name"] = "Aninag";
 		app.meta["packageName"] = "com.example.myapp";
 		app.meta["version"] = "0.0.1";
 
@@ -60,7 +60,7 @@ class ApplicationMain
 			minimized: false,
 			parameters: {},
 			resizable: true,
-			title: "Eskinita",
+			title: "Aninag",
 			width: 1280,
 			x: null,
 			y: null,
@@ -102,7 +102,7 @@ class ApplicationMain
 		app.createWindow(attributes);
 		
 		#elseif air
-		app.window.title = "Eskinita";
+		app.window.title = "Aninag";
 		#else
 		app.window.context.attributes.background = 0;
 		app.window.frameRate = 60;

@@ -2,6 +2,7 @@ package unangkabanata;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.effects.particles.FlxParticle;
 import flixel.group.FlxGroup;
 import flixel.text.FlxText;
 import flixel.util.FlxTimer;

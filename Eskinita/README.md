@@ -7,6 +7,10 @@ In the coastal town of Himbing Bay where firefly trees illuminate the shoreline 
 
 # GAME MADE IN HAXEFLIXEL ON THE WORKS
 
+# PROGRESS AND NEW STUFF
+- temporarily removed the buttom
+- added some gfx
+
 # Issues
 - in Act 1 dialogueText5 and 6 is not working properly
 
@@ -25,3 +29,11 @@ In the coastal town of Himbing Bay where firefly trees illuminate the shoreline 
 
 - [@Steveluv Arts](https://www.instagram.com/steveyarts/)
 
+        // This is here temporarily in case the player wants this in settings
+        virtualPad = new FlxVirtualPad(FlxDPadMode.NONE, FlxActionMode.A);
+		add(virtualPad);
+
+        virtualPad.scale.set(2,2);
+
+        virtualPad.getButton(A).x -= 20; // move left
+        virtualPad.getButton(A).y -= 20;
