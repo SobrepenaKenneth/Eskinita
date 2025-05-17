@@ -70,7 +70,9 @@ import sys.FileSystem;
 		#if (openfl && !flash && !display)
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_blocktopia_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__fonts_blocktopia_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__fonts_shpinscher_regular_otf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_blocktopia_ttf1);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_shpinscher_regular_otf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -96,11 +98,16 @@ import sys.FileSystem;
 
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__fonts_blocktopia_ttf extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__fonts_shpinscher_regular_otf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf1 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_shpinscher_regular_otf extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_amihan_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_amihan_0000_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_images_go_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_placeholderart1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_eskinita_ogg extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_light_10465_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_piano1_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_takbo_ogg extends null { }
@@ -197,14 +204,18 @@ import sys.FileSystem;
 
 @:keep @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
 @:keep @:noCompletion #if display private #end class __ASSET__fonts_blocktopia_ttf extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
+@:keep @:noCompletion #if display private #end class __ASSET__fonts_shpinscher_regular_otf extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "fonts/SHPinscher-Regular.otf"; name = "SH Pinscher Regular"; super (); }}
 @:keep @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf1 extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
+@:keep @:noCompletion #if display private #end class __ASSET__assets_fonts_shpinscher_regular_otf extends lime.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/SHPinscher-Regular.otf"; name = "SH Pinscher Regular"; super (); }}
 
 
 #else
 
 @:keep @:expose('__ASSET__assets_fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "assets/fonts/blocktopia.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__fonts_blocktopia_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "fonts/blocktopia.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__fonts_shpinscher_regular_otf') @:noCompletion #if display private #end class __ASSET__fonts_shpinscher_regular_otf extends lime.text.Font { public function new () { #if !html5 __fontPath = "fonts/SHPinscher-Regular.otf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "SH Pinscher Regular"; super (); }}
 @:keep @:expose('__ASSET__assets_fonts_blocktopia_ttf1') @:noCompletion #if display private #end class __ASSET__assets_fonts_blocktopia_ttf1 extends lime.text.Font { public function new () { #if !html5 __fontPath = "assets/fonts/blocktopia.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__assets_fonts_shpinscher_regular_otf') @:noCompletion #if display private #end class __ASSET__assets_fonts_shpinscher_regular_otf extends lime.text.Font { public function new () { #if !html5 __fontPath = "assets/fonts/SHPinscher-Regular.otf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "SH Pinscher Regular"; super (); }}
 @:keep @:expose('__ASSET__flixel_fonts_nokiafc22_ttf') @:noCompletion #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "flixel/fonts/nokiafc22.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Nokia Cellphone FC Small"; super (); }}
 @:keep @:expose('__ASSET__flixel_fonts_monsterrat_ttf') @:noCompletion #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { #if !html5 __fontPath = "flixel/fonts/monsterrat.ttf"; #else ascender = null; descender = null; height = null; numGlyphs = null; underlinePosition = null; underlineThickness = null; unitsPerEM = null; #end name = "Monsterrat"; super (); }}
 
@@ -216,14 +227,18 @@ import sys.FileSystem;
 #if html5
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf extends openfl.text.Font { public function new () { name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__fonts_blocktopia_ttf extends openfl.text.Font { public function new () { name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__OPENFL__fonts_shpinscher_regular_otf') @:noCompletion #if display private #end class __ASSET__OPENFL__fonts_shpinscher_regular_otf extends openfl.text.Font { public function new () { name = "SH Pinscher Regular"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf1') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf1 extends openfl.text.Font { public function new () { name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__OPENFL__assets_fonts_shpinscher_regular_otf') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_shpinscher_regular_otf extends openfl.text.Font { public function new () { name = "SH Pinscher Regular"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_nokiafc22_ttf ()); super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_monsterrat_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_monsterrat_ttf ()); super (); }}
 
 #else
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__fonts_blocktopia_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__fonts_blocktopia_ttf extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__OPENFL__fonts_shpinscher_regular_otf') @:noCompletion #if display private #end class __ASSET__OPENFL__fonts_shpinscher_regular_otf extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "fonts/SHPinscher-Regular.otf"; name = "SH Pinscher Regular"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__assets_fonts_blocktopia_ttf1') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_blocktopia_ttf1 extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/blocktopia.ttf"; name = "Blocktopia"; super (); }}
+@:keep @:expose('__ASSET__OPENFL__assets_fonts_shpinscher_regular_otf') @:noCompletion #if display private #end class __ASSET__OPENFL__assets_fonts_shpinscher_regular_otf extends openfl.text.Font { public function new () { __fontPath = ManifestResources.rootPath + "assets/fonts/SHPinscher-Regular.otf"; name = "SH Pinscher Regular"; super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_nokiafc22_ttf ()); super (); }}
 @:keep @:expose('__ASSET__OPENFL__flixel_fonts_monsterrat_ttf') @:noCompletion #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { __fromLimeFont (new __ASSET__flixel_fonts_monsterrat_ttf ()); super (); }}
 

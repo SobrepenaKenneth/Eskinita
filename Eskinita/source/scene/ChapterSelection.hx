@@ -46,7 +46,7 @@ class ChapterSelection extends FlxState{
 
 	public function StartC1Game()
 	{
-		FlxG.switchState(unangkabanata.Act1.new);
+		FlxG.switchState(chapter1.Act1.new);
 	}
 
 }

@@ -1,5 +1,6 @@
 package;
 
+import chapter1.Act1;
 import flixel.FlxGame;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -7,7 +8,6 @@ import openfl.display.Sprite;
 import scene.ChapterSelection;
 import scene.Intro;
 import scene.MainMenu;
-import unangkabanata.Act1;
 
 class Main extends Sprite
 {

@@ -1,10 +1,15 @@
 export/neko/bin/assets/fonts/blocktopia.ttf
 export/neko/bin/fonts/blocktopia.ttf
+export/neko/bin/fonts/SHPinscher-Regular.otf
 export/neko/bin/assets/data/data-goes-here.txt
 export/neko/bin/assets/fonts/blocktopia.ttf
+export/neko/bin/assets/fonts/SHPinscher-Regular.otf
+export/neko/bin/assets/images/amihan.png
+export/neko/bin/assets/images/Amihan_0000.png
 export/neko/bin/assets/images/images-go-here.txt
 export/neko/bin/assets/images/PlaceholderArt1.png
 export/neko/bin/assets/music/Eskinita.ogg
+export/neko/bin/assets/music/light-10465.ogg
 export/neko/bin/assets/music/music-goes-here.txt
 export/neko/bin/assets/music/piano1.ogg
 export/neko/bin/assets/music/takbo.ogg
